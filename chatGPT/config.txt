@@ -1,0 +1,23 @@
+// Máximo de clientes no sofá
+MAX_CUST_SOFA = 3
+
+// Máximo de clientes em pé
+MAX_CUST_FOOT = 5
+
+// Número de barbeiros
+NR_BARBERS = 5
+
+// Número de clientes gerados
+NR_CUST = 2
+
+// Intervalo de tempo máximo entre geração de clientes (em segundos)
+INTERVAL_CUST_ARRIVAL = 0
+
+// Tempo máximo de corte de cabelo (em segundos)
+HAIRCUT_TIME = 0
+
+// Tempo máximo para aceitar pagamento (em segundos)
+ACCEPT_PAYMENT_TIME = 10
+
+// Número de loops que o código todo será executado
+NR_FULL_LOOPS = 2
