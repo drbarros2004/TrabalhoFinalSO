@@ -1,11 +1,11 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -pthread -O2
-TARGET = TrabalhoBarbeiro
+TARGET = TrabalhoBarbeiroChatgpt
 
 all: $(TARGET)
 
-$(TARGET): TrabalhoBarbeiro.c
-	$(CC) $(CFLAGS) -o $(TARGET) TrabalhoBarbeiro.c
+$(TARGET): TrabalhoBarbeiroChatgpt.c
+	$(CC) $(CFLAGS) -o $(TARGET) TrabalhoBarbeiroChatgpt.c
 
 clean:
 	rm -f $(TARGET) *.o
