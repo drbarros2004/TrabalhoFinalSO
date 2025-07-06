@@ -598,7 +598,6 @@ int main(void) {
     for (int i = 0; i < NR_FULL_LOOPS; i++) {
         printf("\n===== Inicio do Loop %d =====\n", i + 1);
         run_simulation();
-	printf("Numero de Clientes Atendidos = %d\n", n_entered);
         printf("===== Fim do Loop %d =====\n\n", i + 1);
     }
 
