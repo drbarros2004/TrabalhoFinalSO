@@ -598,71 +598,10 @@ int main(void) {
     for (int i = 0; i < NR_FULL_LOOPS; i++) {
         printf("\n===== Inicio do Loop %d =====\n", i + 1);
         run_simulation();
+	printf("Numero de Clientes Atendidos = %d\n", n_entered);
         printf("===== Fim do Loop %d =====\n\n", i + 1);
     }
 
     return 0;
 }
-
-
-
-
-
-
-
-
-/*
-// ----------- Função main (1) -----------
-int main(void) {
-    // ----------- Definindo os valores principais (ajuste como quiser) -----------
-    MAX_CUST_SOFA = 3;
-    MAX_CUST_FOOT = 5;
-    NR_BARBERS = 3;
-    NR_CUST = 10;
-    INTERVAL_CUST_ARRIVAL = 3;
-	HAIRCUT_TIME = 1;
-	ACCEPT_PAYMENT_TIME = 1;
-
-    // ----------- Inicialização das filas -----------
-    init_queue_int(&queue_foot, MAX_CUST_FOOT);
-    init_queue_sofa(&queue_sofa, MAX_CUST_SOFA);
-
-    // ----------- Arrays de threads -----------
-    pthread_t threadsCustomer[NR_CUST];
-    pthread_t threadsBarber[NR_BARBERS];
-
-    // ----------- Semente aleatória -----------
-    srand((unsigned)time(NULL));
-
-    // ----------- Criação das threads dos barbeiros -----------
-    for (int i = 0; i < NR_BARBERS; i++) {
-        int* id = malloc(sizeof(int));
-        *id = i;
-        pthread_create(&threadsBarber[i], NULL, Barber, id);
-    }
-
-    // ----------- Criação das threads dos clientes com intervalo aleatório -----------
-    for (int i = 0; i < NR_CUST; i++) {
-        sleep(rand() % (INTERVAL_CUST_ARRIVAL + 1));
-
-        int* id = malloc(sizeof(int));
-        *id = i;
-        pthread_create(&threadsCustomer[i], NULL, Customer, id);
-    }
-
-    // ----------- Espera as threads dos clientes terminarem -----------
-    for (int i = 0; i < NR_CUST; i++) {
-        pthread_join(threadsCustomer[i], NULL);
-    }
-
-    // ----------- Espera as threads dos barbeiros terminarem -----------
-    for (int i = 0; i < NR_BARBERS; i++) {
-        pthread_join(threadsBarber[i], NULL);
-    }
-
-	printf("Numero de Clientes Atendidos = %d\n", n_entered);
-
-    return 0;
-}
-*/
 
