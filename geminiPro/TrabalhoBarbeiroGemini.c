@@ -1,3 +1,6 @@
+// Sistema operacional: Linux (Ubuntu 24.04 via WSL)
+// Desenvolvido e testado usando: gcc 13.3.0, pthreads
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
